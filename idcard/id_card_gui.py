@@ -179,7 +179,7 @@ class IDGen:
         showinfo('成功', '文件已生成到目录下,黑白bw.png和彩色color.png')
 
     def select_dir(self):
-        dirpath = tkinter.filedialog.askdirectory(initialdir=os.path.join(self.edir.get(),"output"),title='选择目录') # 选择文件夹
+        dirpath = tkinter.filedialog.askdirectory(initialdir=self.edir.get(),title='选择目录') # 选择文件夹
         # self.dir = askopenfilename(initialdir=os.getcwd(), title='选择目录')
         
         set_entry_value(self.edir,dirpath)
