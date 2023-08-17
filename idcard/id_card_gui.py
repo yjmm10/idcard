@@ -12,7 +12,7 @@ import cv2
 import numpy
 from PIL import ImageFont, ImageDraw
 
-from idcard_generator import id_card_utils, name_utils, utils, loading_alert
+from idcard import id_card_utils, name_utils, utils, loading_alert
 IDInfos = name_utils.IDInfos
 
 asserts_dir = os.path.join(utils.get_base_path(), 'asserts')
@@ -195,9 +195,9 @@ class IDGen:
         link.grid(row=0, column=0, sticky=tkinter.W, padx=3, pady=3, columnspan=3)
         link.bind("<Button-1>", utils.open_url)
 
-        link = Label(root, text='https://github.com/bzsome', cursor='hand2', foreground="blue")
-        link.grid(row=0, column=2, sticky=tkinter.W, padx=26, pady=3, columnspan=4)
-        link.bind("<Button-1>", utils.open_url)
+        # link = Label(root, text='https://github.com/bzsome', cursor='hand2', foreground="blue")
+        # link.grid(row=0, column=2, sticky=tkinter.W, padx=26, pady=3, columnspan=4)
+        # link.bind("<Button-1>", utils.open_url)
 
         Label(root, text='姓名:').grid(row=1, column=0, sticky=tkinter.W, padx=3, pady=3)
         self.eName = Entry(root, width=6)
